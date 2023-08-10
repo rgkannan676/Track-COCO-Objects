@@ -5,8 +5,8 @@ class yolo_object_detector:
     def __init__(self, model_path):
         self.model = YOLO(model_path)        
         
-    def get_object_detection_result(self,image):
-        results = self.model.predict(source=image, save=False, save_txt=False, conf=0.25, show=False, device=0,verbose=False)
+    def get_object_detection_result(self,image,conf,device):
+        results = self.model.predict(source=image, save=False, save_txt=False, conf=0.5, show=False, device=0,verbose=False)
         return results
     
 

@@ -2,6 +2,7 @@ import os
 from yolo.yolo_object_detection import yolo_object_detector 
 import cv2
 from tqdm import tqdm
+from coco_class_map import *
 
 ######## No Change Needed Configs ###########
 #Input Video Folder
@@ -19,9 +20,16 @@ YOLO_CHECK_POINT = "yolov8n.pt"
 
 
 def process_image(image,results):
-    for result in results:
-        boxes = result.boxes.data   #x1,y1,x2,y2,conf,class
-        #print(boxes)
+    boxes = results[0].boxes.data.cpu()   #x1,y1,x2,y2,conf,class
+    for det in boxes:
+        x1= int(det[0].item())
+        y1= int(det[1].item())
+        x2= int(det[2].item())
+        y2= int(det[3].item())
+        cls = int(det[5].item())
+        image = cv2.rectangle(image, (x1,y1), (x2,y2), (255,0,0), 2)
+        image = cv2.putText(image,str(COCO_CLASS_MAP[cls]), (x1,y1), cv2.FONT_HERSHEY_SIMPLEX, 2, (0,255,0), 2, cv2.LINE_AA)
+        #print(x1,y1,x2,y2,cls)
     return image
         
     
@@ -65,7 +73,7 @@ if __name__ == "__main__":
                 # Capture frame-by-frame
                 ret, frame = cap.read()                
                 if ret == True:
-                    results = yolo.get_object_detection_result(frame)
+                    results = yolo.get_object_detection_result(frame,0.5,0)  #conf,device
                     result_image = process_image(frame,results)
                     output_file.write(result_image)
                                 
