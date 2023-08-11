@@ -15,7 +15,7 @@ Steps to install and use in Ananconda
 - Download yolov8 pytorch checkpoint model [yolov8m.pt](https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8m.pt) provided by **[Ultralytics](https://github.com/ultralytics/ultralytics)**  and copy to 'yolo' folder. 
 - Copy the videos to covert in the folder 'video_input'
 - Run 'python main.py'. This will start the processing.
-- See the output videos in folder 'video_output'
+- See the output videos in folder 'video_output' . The video will contain object detection results with a tracking id for each coco object.
 
 ## Adjustable Configs
 Can change the below configs in main.py.
