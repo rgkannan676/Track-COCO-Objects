@@ -1,4 +1,4 @@
-# VideoToCartoon
+# Track COCO objects
 
 A tool that tracks the COCO objects in a video. This repo uses the Yolov8 object detection model provided by **[Ultralytics](https://github.com/ultralytics/ultralytics)** and the Simple Online Realtime Tracking(SORT) algorithm provided by **[sort](https://github.com/abewley/sort)**. 
 
