@@ -27,4 +27,4 @@ Can change the below configs in main.py.
 - SORT_IOU: IOU threshold used for SORT  algorithm.
 
 ## Result Sample
-![Result](samples/sample?raw=true "Result")
+[sample.webm](https://github.com/rgkannan676/Track-COCO-Objects/assets/29349268/c40c1d4d-86a7-4c03-ab94-c7b82c858e9f)
