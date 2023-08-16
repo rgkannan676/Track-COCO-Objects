@@ -26,5 +26,3 @@ Can change the below configs in main.py.
 - SORT_MIN_HIT: Minimum number of hit_streaks(total number of times it consecutively got matched with detection in the last frames) such that it gets displayed in the outputs.
 - SORT_IOU: IOU threshold used for SORT  algorithm.
 
-## Result Sample
-[sample.webm](https://github.com/rgkannan676/Track-COCO-Objects/assets/29349268/c40c1d4d-86a7-4c03-ab94-c7b82c858e9f)
