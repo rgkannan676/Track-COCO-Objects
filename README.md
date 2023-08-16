@@ -26,3 +26,4 @@ Can change the below configs in main.py.
 - SORT_MIN_HIT: Minimum number of hit_streaks(total number of times it consecutively got matched with detection in the last frames) such that it gets displayed in the outputs.
 - SORT_IOU: IOU threshold used for SORT  algorithm.
 
+![Result](sample/sample.mp4)
