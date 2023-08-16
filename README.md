@@ -27,6 +27,11 @@ Can change the below configs in main.py.
 - SORT_IOU: IOU threshold used for SORT  algorithm.
 
 ## Result
-https://github.com/rgkannan676/Track-COCO-Objects/assets/29349268/7f098722-65cc-452b-8af8-51b19ed3607b
+- Check sample/sample.mp4
+
+
+
+https://github.com/rgkannan676/Track-COCO-Objects/assets/29349268/e3fb9fab-c733-43e6-87ce-688904d06016
+
 
 
